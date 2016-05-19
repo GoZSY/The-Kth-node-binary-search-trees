@@ -16,10 +16,10 @@ public:
         if(pRoot)
         { 
             TreeNode *ret = KthNode(pRoot->left, k);
-            if(ret) return ret;
+            if(ret) return ret;//为了可以逐层的返回
             if(++count == k) return pRoot;
             ret = KthNode(pRoot->right,k);
-            if(ret) return ret;
+            if(ret) return ret;//为了可以逐层的返回
         }
         return NULL;
     }
